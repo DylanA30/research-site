@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from cloudinary_storage.storage import VideoMediaCloudinaryStorage
 
 
 # -----------------------------------------------------------------------
@@ -112,7 +113,12 @@ class ProjectImage(models.Model):
         related_name="images",
     )
     image = models.ImageField(upload_to="project_gallery/", blank=True, null=True)
-    video = models.FileField(upload_to="project_gallery/videos/", blank=True, null=True)
+    video = models.FileField(
+        upload_to="project_gallery/videos/",
+        storage=VideoMediaCloudinaryStorage(),
+        blank=True,
+        null=True,
+    )
     caption = models.CharField(max_length=600, blank=True)
     order = models.PositiveIntegerField(default=0)
     category = models.CharField(
