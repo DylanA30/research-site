@@ -1,0 +1,47 @@
+{% extends "projects/base.html" %}
+
+{% block content %}
+<section class="homepage-hero">
+    <div class="about-column">
+    <h1>About Me</h1>
+</div>
+
+<div class="bio-column">
+    <p class="sub-bio">B.S. Chemical Engineering &bull; Florida State University &bull; Class of 2030</p>
+    <p class="bio-text">
+        Chemical Engineering student at Florida State University with a passion for sustainable materials, polymer science, and
+        environmental engineering. I am particularly interested in developing sustainable energy technologies and advanced materials
+        that can improve efficiency, reduce environmental impact, and address challenges in modern manufacturing. This portfolio
+        showcases my independent research, laboratory experience, engineering projects, and overall chemical engineering journey —
+        highlighting the methods, data, problem-solving, and curiosity behind each investigation.
+    </p>
+    <div class="hero-buttons">
+        <a href="{% url 'project_list' %}" class="btn btn-primary">View Research</a>
+        <a href="/static/resume.pdf" class="btn btn-secondary" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/dylan-atkins-2b04503a0/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+</div>
+</section>
+<section class="news-section">
+    <h2>Recent News</h2>
+    <div class="news-grid">
+        {% for item in recent_news %}
+            <article class="news-card">
+    {% if item.image %}
+        <img src="{{ item.image.url }}" alt="{{ item.title }}" class="news-image">
+    {% endif %}
+    <h3 class="news-title">{{ item.title }}</h3>
+    <p class="news-date">{{ item.date|date:"M j, Y" }}</p>
+    <div class="news-tags">
+        {% for tag in item.tags.all %}
+            <span class="tag">{{ tag.name }}</span>
+        {% endfor %}
+    </div>
+    <a href="{% url 'news_detail' item.slug %}" class="news-see-more">See More &rarr;</a>
+</article>
+        {% empty %}
+            <p>No news yet — check back soon.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

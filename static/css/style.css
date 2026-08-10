@@ -1,0 +1,689 @@
+/* Import clean sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+/* ==========================================================================
+   Base Styles & Color Variables
+   ========================================================================== */
+:root {
+    --bg-main: #0B1220;         /* Deep slate background */
+    --bg-header: #090d16;       /* Darker header/footer accent */
+    --bg-card: #1e293b;         /* Modern card background */
+    --bg-card-hover: #243348;   /* Elevated card state */
+
+    --text-main: #f8fafc;       /* Crisp white for main text */
+    --text-muted: #94a3b8;      /* Readable soft gray for descriptions */
+    --accent: #38bdf8;          /* Bright cyan accent */
+    --accent-hover: #0284c7;    /* Deeper cyan for hovers */
+
+    --border-color: #334155;    /* Subtle dark border */
+    --border-hover: #475569;    /* Pronounced border on hover */
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+    color: #7dd3fc;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #161d27;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95em;
+}
+
+.site-nav a:hover {
+    color: #2563EB;
+}
+
+.site-nav-left a:hover,
+.site-nav-right a:hover {
+    color: #2563EB;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    color: var(--text-main);
+}
+
+.site-logo:hover {
+    color: var(--accent);
+}
+
+.navbar {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.nav-item {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-item:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Main Layout Container
+   ========================================================================== */
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    text-align: center;
+    max-width: 720px;
+    margin: 3.5rem auto 4.5rem;
+}
+
+.hero-name {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.hero-bio {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0284c7;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    background-color: rgba(56, 189, 248, 0.05);
+}
+
+/* ==========================================================================
+   Controls Section (Search & Filter Tags)
+   ========================================================================== */
+.projects-section {
+    padding-top: 1rem;
+}
+
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .controls-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    outline: none;
+    min-width: 240px;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: var(--accent);
+}
+
+.search-input::placeholder {
+    color: #64748b;
+}
+
+.btn-search {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-search:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-pill {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag-pill:hover,
+.tag-pill.active {
+    background: var(--accent);
+    color: #0284c7;
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Project Cards Grid
+   ========================================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.detail-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin: 0 auto 20px;
+    background: #1e293b;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 190px;
+    background-color: #0f172a;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: var(--border-hover);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-header {
+    margin-bottom: 0.5rem;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+    line-height: 1.35;
+}
+
+.card-summary {
+    color: var(--text-muted);
+    font-size: 0.925rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.mini-tag {
+    background: rgba(51, 65, 85, 0.6);
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.25rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Project Detail / Gallery & Lightbox
+   ========================================================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.gallery-item.results img {
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    background: #ffffff;
+}
+
+.gallery-item figcaption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+#lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    z-index: 2000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+#lightbox-caption {
+    color: var(--text-main);
+    margin-top: 1rem;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background-color: var(--bg-header);
+    border-top: 1px solid var(--border-color);
+    padding: 4rem 2rem 2rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+.footer-col h4 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(51, 65, 85, 0.5);
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+/* Import clean sans-serif font */
+.homepage-hero {
+    display: flex;
+    justify-content: space-between; /* Keeps 'About Me' anchored left and Bio anchored right */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 5%;
+    box-sizing: border-box;
+
+}
+
+/* Left side stays strictly on the far left */
+.about-column {
+    flex: 0 0 auto;
+    margin-right: 230px; /* Increase this number to push biotext to the right? (No clue why thats the case) */
+    /* translate(X, Y) */
+    /* Negative X moves LEFT. Positive Y moves DOWN. */
+    transform: translate(-380px, 50px);
+}
+
+.about-column h1 {
+    font-size: 6.0em;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+    color: #F8FAFC;
+    white-space: nowrap;
+}
+
+/* Right side is constrained so it never touches the left column */
+.bio-column {
+    flex: 0 0 80%;       /* Takes up more horizontal space */
+    max-width: 999px;    /* MUST be wide enough (900px+) for 16-17 words per line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bio-column .sub-bio {
+    color: #782F40;
+    font-weight: 500;
+    font-size: 0.85em;
+    text-align: center;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.bio-column .bio-text {
+    color: #CBD5E1;
+    font-size: 0.95em;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.bio-column .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+}
+
+.bio-column .hero-buttons .btn {
+    display: block;
+    width: 240px;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* View Research — primary button */
+.bio-column .hero-buttons .btn-primary {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #F8FAFC;
+}
+
+/* Resume / LinkedIn — secondary buttons */
+.bio-column .hero-buttons .btn-secondary {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #F8FAFC;
+}
+
+/* Hover state for both */
+.bio-column .hero-buttons .btn:hover {
+    background: #782F40;
+    border-color: #782F40;
+    color: #F8FAFC;
+}
+/* 1. Prevent horizontal scrolling globally */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Prevent flex containers from overflowing calculations */
+.homepage-hero {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* NEWS SECTION */
+.news-section {
+    padding: 20px 60px 80px 10px;
+    margin-left: -340px; /* Should be Set */
+    margin-top: 75px;  /* negative = moves up, positive = moves down */
+
+}
+
+.news-see-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.news-detail {
+    padding: 40px 60px;
+    max-width: 800px;
+}
+
+.news-detail-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.news-description {
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-top: 20px;
+}}

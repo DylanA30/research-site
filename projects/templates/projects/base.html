@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dylan Atkins — Chemical Engineering & Research{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Site Header / Navigation -->
+<header class="site-header">
+    <a href="/" class="site-logo">DYLAN ATKINS</a>
+    <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="{% url 'project_list' %}">Projects</a>
+        <a href="#footer-contact">Contact</a>
+    </nav>
+</header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-contact" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Dylan Atkins</h4>
+                <p>B.S. Chemical Engineering</p>
+                <p>Florida State University</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Information</h4>
+                <p><strong>School:</strong> dja25b@fsu.edu</a></p>
+                <p><strong>Personal:</strong> dylanatkins30@gmail.com </p>
+                <p><strong>Phone:</strong> (561) 425-4901</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dylan Atkins. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

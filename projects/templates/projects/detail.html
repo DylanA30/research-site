@@ -1,0 +1,90 @@
+{% extends "projects/base.html" %}
+
+{% block content %}
+
+    {% if project.cover_image %}
+       <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="detail-image" onclick="openLightbox(this)" style="cursor: zoom-in;">
+    {% endif %}
+
+    <p class="status">Status: {{ project.get_status_display }}</p>
+
+    <div class="tags">
+        {% for tag in project.tags.all %}
+            <span class="tag">{{ tag.name }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="description">
+        {{ project.description|linebreaks }}
+    </div>
+
+    {% if project.external_link %}
+        <a href="{{ project.external_link }}" target="_blank">
+            View external link &rarr;
+        </a>
+    {% endif %}
+
+    <!-- Gallery section: project.images.all() pulls every ProjectImage
+         linked to this project via the related_name="images" we set
+         on the ForeignKey in models.py. Ordered automatically by the
+         "order" field thanks to Meta.ordering on ProjectImage. -->
+    {% if project.images.all %}
+        <!-- Process Photos section: only images tagged category="process" -->
+        <h2>Gallery</h2>
+        <div class="gallery">
+            {% for img in project.images.all %}
+                {% if img.category == "process" %}
+                    <figure class="gallery-item">
+    {% if img.video %}
+        <video controls>
+            <source src="{{ img.video.url }}">
+        </video>
+    {% elif img.image %}
+        <img src="{{ img.image.url }}" alt="{{ img.caption }}" onclick="openLightbox(this)" style="cursor: zoom-in;">
+    {% endif %}
+    {% if img.caption %}
+        <figcaption>{{ img.caption }}</figcaption>
+    {% endif %}
+</figure>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Data & Results section: only images tagged category="results" -->
+        <h2>Data &amp; Results</h2>
+        <div class="gallery">
+            {% for img in project.images.all %}
+                {% if img.category == "results" %}
+                        <figure class="gallery-item">
+    {% if img.video %}
+        <video controls>
+            <source src="{{ img.video.url }}">
+        </video>
+    {% elif img.image %}
+        <img src="{{ img.image.url }}" alt="{{ img.caption }}" onclick="openLightbox(this)" style="cursor: zoom-in;">
+    {% endif %}
+    {% if img.caption %}
+        <figcaption>{{ img.caption }}</figcaption>
+    {% endif %}
+</figure>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+<!-- Lightbox: hidden by default, shown when an image is clicked -->
+<div id="lightbox-overlay" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+</div>
+
+<script>
+function openLightbox(imgElement) {
+    document.getElementById('lightbox-img').src = imgElement.src;
+    document.getElementById('lightbox-caption').textContent = imgElement.alt;
+    document.getElementById('lightbox-overlay').style.display = 'flex';
+}
+function closeLightbox() {
+    document.getElementById('lightbox-overlay').style.display = 'none';
+}
+</script>
+{% endblock %}

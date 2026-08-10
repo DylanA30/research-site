@@ -1,0 +1,73 @@
+{% extends "projects/base.html" %}
+
+{% block content %}
+<!-- Projects Container -->
+<section id="projects" class="projects-section">
+    <div class="section-header">
+        <h2>Research Projects</h2>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls-bar">
+            <form method="get" class="search-form">
+                <input
+                    type="text"
+                    name="q"
+                    placeholder="Search projects..."
+                    value="{{ query }}"
+                    class="search-input"
+                >
+                <button type="submit" class="btn-search">Search</button>
+            </form>
+
+            <div class="tag-filters">
+                <a href="{% url 'project_list' %}"
+                   class="tag-pill {% if not active_tag %}active{% endif %}">All</a>
+
+                {% for tag in all_tags %}
+                    <a href="?tag={{ tag.name }}"
+                       class="tag-pill {% if active_tag == tag.name %}active{% endif %}">
+                        {{ tag.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="project-grid">
+        {% for project in projects %}
+            <article class="project-card">
+                <a href="{% url 'project_detail' project.slug %}" class="card-link">
+                    <div class="card-image-wrapper">
+                        {% if project.cover_image %}
+                            <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="card-image">
+                        {% else %}
+                            <div class="card-image-placeholder">
+                                <span>{{ project.title|slice:":2"|upper }}</span>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="status-badge">{{ project.get_status_display }}</span>
+                        </div>
+                        <h3 class="card-title">{{ project.title }}</h3>
+                        <p class="card-summary">{{ project.summary }}</p>
+
+                        <div class="card-tags">
+                            {% for tag in project.tags.all %}
+                                <span class="mini-tag">{{ tag.name }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </a>
+            </article>
+        {% empty %}
+            <div class="no-results">
+                <p>No projects found matching your criteria.</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

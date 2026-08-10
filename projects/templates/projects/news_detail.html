@@ -1,0 +1,23 @@
+{% extends "projects/base.html" %}
+
+{% block content %}
+<section class="news-detail">
+    <a href="/">&larr; Back to Home</a>
+    <h1>{{ item.title }}</h1>
+    <p class="news-date">{{ item.date|date:"F j, Y" }}</p>
+
+    {% if item.image %}
+        <img src="{{ item.image.url }}" alt="{{ item.title }}" class="news-detail-image">
+    {% endif %}
+
+    <div class="news-tags">
+        {% for tag in item.tags.all %}
+            <span class="tag">{{ tag.name }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="news-description">
+        {{ item.description|linebreaks }}
+    </div>
+</section>
+{% endblock %}
