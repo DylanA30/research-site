@@ -1,0 +1,503 @@
+[
+{
+  "model": "projects.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Python"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 4,
+  "fields": {
+    "name": "Water Treatment"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 5,
+  "fields": {
+    "name": "Independent Research"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 6,
+  "fields": {
+    "name": "Experimental Design"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 8,
+  "fields": {
+    "name": "Sustainable Extraction"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 10,
+  "fields": {
+    "name": "3D-printing"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 11,
+  "fields": {
+    "name": "Polymer-science"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 12,
+  "fields": {
+    "name": "Shadow"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 13,
+  "fields": {
+    "name": "Internship"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 14,
+  "fields": {
+    "name": "Volunteer"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 15,
+  "fields": {
+    "name": "CAREER CHANGING NEWS!!"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 2,
+  "fields": {
+    "title": "Perfluorooctanoic Acid (PFOA) Removal from Water Using Dimethyl Sulfoxide and Granular Activated Carbon",
+    "slug": "perfluorooctanoic-acid-pfoa-removal-from-water-using-dimethyl-sulfoxide-and-granular-activated-carbon",
+    "summary": "Per- and polyfluoroalkyl substances (PFAS), including perfluorooctanoic acid (PFOA), are persistent environmental contaminants due to their chemical stability and resistance to conventional degradation methods. This independent research project investigated the potential removal of PFOA from water u",
+    "description": "Per- and polyfluoroalkyl substances (PFAS) are a class of persistent synthetic chemicals widely used in industrial and consumer applications due to their resistance to heat, water, and chemical degradation. For my independent research project, I investigated the potential removal of perfluorooctanoic acid (PFOA) from contaminated water using a combination of dimethyl sulfoxide (DMSO) treatment and granular activated carbon (GAC) adsorption.\r\n\r\nI designed an experimental approach to evaluate how solvent-assisted treatment could influence PFOA adsorption behavior. The project involved developing sample preparation procedures, controlling experimental variables, and analyzing the interactions between PFAS compounds, organic solvents, and adsorption materials. Granular activated carbon was selected due to its high surface area and established ability to remove organic contaminants through adsorption.\r\n\r\nA major challenge encountered during the project was difficulty obtaining PFOA within the planned research timeline, delaying experimental testing and limiting available data collection. This required adaptation of the original research plan and highlighted the importance of resource availability, contingency planning, and experimental flexibility in independent scientific investigations.\r\nThrough this project, I gained experience in environmental remediation techniques, adsorption \r\nchemistry, experimental design, chemical preparation, and scientific problem-solving while developing a deeper understanding of the challenges involved in addressing emerging contaminants such as PFAS.",
+    "cover_image": "project_covers/PFAS-Cycle.jpg",
+    "status": "completed",
+    "external_link": "",
+    "created_at": "2026-07-20T02:04:15.762Z",
+    "updated_at": "2026-08-09T16:59:06.712Z",
+    "tags": [
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "title": "The Effect of  Aluminum Hydroxide on Lithium Ion Separation",
+    "slug": "the-effect-of-aluminum-hydroxide-on-lithium-ion-separation",
+    "summary": "Investigating aluminum hydroxide as a low-cost adsorbent for sustainable lithium recovery from aqueous solutions under varying pH conditions.",
+    "description": "As part of my junior year (high school) independent research, I investigated whether aluminum hydroxide could serve as a low-cost adsorbent for recovering lithium ions from solution. With the rapid growth of lithium-ion batteries, improving lithium recovery has become increasingly important, as many current extraction methods are energy-intensive and environmentally demanding. The goal of this project was to determine how solution pH influenced the adsorption of lithium ions onto aluminum hydroxide.\r\n\r\nI prepared lithium carbonate solutions under both acidic and basic conditions before adding aluminum hydroxide to each sample. After allowing adsorption to occur, I analyzed the remaining lithium concentration and compared the performance across different pH levels. To evaluate whether the observed differences were meaningful, I performed statistical analysis using t-tests.\r\n\r\nThe results showed that solution pH played a significant role in adsorption efficiency. Basic conditions consistently produced greater lithium adsorption than acidic conditions, with all comparisons showing statistical significance (p < 0.05). These findings supported the hypothesis that aluminum hydroxide remains more chemically stable under basic conditions, allowing more active surface sites to bind lithium ions.\r\n\r\nThrough this project, I gained experience in experimental design, solution preparation, adsorption chemistry, statistical analysis, and interpreting experimental data. The work demonstrated how relatively simple and inexpensive materials can contribute to more sustainable resource recovery while reinforcing the importance of optimizing chemical conditions in engineering processes.",
+    "cover_image": "project_covers/Lithium-Cylce_14rAyve.jpg",
+    "status": "completed",
+    "external_link": "",
+    "created_at": "2026-07-21T05:31:22.532Z",
+    "updated_at": "2026-08-09T16:57:38.074Z",
+    "tags": [
+      5,
+      6,
+      8
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "title": "Optimization of Poly(acrylic acid)-Based Polymer Networks for Extrusion and 3D Forming Applications",
+    "slug": "optimization-of-polyacrylic-acid-based-polymer-networks-for-extrusion-and-3d-forming-applications",
+    "summary": "Engineering a water-based, low-temperature polymer material as a more sustainable alternative to conventional plastic 3D printing filament.",
+    "description": "Most extrusion-based 3D printing materials are petroleum-derived thermoplastics that require high processing temperatures. For my senior year (high school) independent research project, I investigated whether a water-based hydrogel could provide a more sustainable alternative while maintaining sufficient mechanical strength for extrusion.\r\n\r\nI prepared and tested several hydrogel formulations by varying polymer composition, reinforcement, and solvent treatments. After synthesizing each material, I evaluated its mechanical properties using tear force and extension testing before selecting the strongest formulations for extrusion experiments using a modified hot glue gun as a prototype extruder.\r\n\r\nThe sodium poly(acrylate) (NaPAA) reinforced hydrogel produced the best mechanical performance, increasing tear strength by approximately 33% compared to the base PAA–PVA formulation. Although the reinforced material was stronger, extrusion testing revealed that it fractured into segments and clogged the nozzle rather than flowing continuously. This demonstrated that successful extrusion depends not only on material strength but also on rheological properties such as shear-thinning behavior.\r\n\r\nThrough this project, I gained experience in polymer synthesis, experimental design, mechanical testing, statistical analysis, and iterative engineering design while developing a deeper understanding of the relationship between material properties and manufacturing performance.",
+    "cover_image": "project_covers/Hydrogel-Cycle.jpg",
+    "status": "completed",
+    "external_link": "",
+    "created_at": "2026-07-30T21:59:34.690Z",
+    "updated_at": "2026-08-09T18:07:49.125Z",
+    "tags": [
+      5,
+      6,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 1,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_5007.jpg",
+    "video": "",
+    "caption": "Initial attempt dried into fibrous, disconnected strands instead of a continuous film — likely uneven mixing or drying. Adjusted by stirring more thoroughly before casting and even drying",
+    "order": 2,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 2,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_DF83BB06-B145-480A-A58D-3225695794CE.JPG",
+    "video": "",
+    "caption": "Troubleshooting NaPAA hydration: initial attempt clumped instead of forming a smooth slurry — resolved by increasing water ratio and stirring time.",
+    "order": 1,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 3,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_5001.jpg",
+    "video": "",
+    "caption": "Testing PAA–PAH film flexibility: the polyelectrolyte film shows visible elasticity, stretching into a thin strand under tension rather than snapping — an early indicator of its cohesion and tensile behavior before formal mechanical testing.",
+    "order": 3,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 4,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4903.jpg",
+    "video": "",
+    "caption": "Dried PAA–PAH polyelectrolyte film being peeled from the Petri dish — thin, clear, and continuous, confirming successful film formation after adjusting the casting process.",
+    "order": 4,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 5,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4986_LjJPCBu.jpg",
+    "video": "",
+    "caption": "Sodium polyacrylate (NaPAA)-reinforced hydrogel following synthesis. The hydrogel exhibits a cohesive, self-supporting structure and stretches under gravity when lifted with a spatula, demonstrating successful polymer network formation and viscoelastic behavior. These properties indicate improved mechanical integrity, making the material suitable for subsequent encapsulation and extrusion testing",
+    "order": 5,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 6,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_6DA4FF29-21AD-4B34-83CC-01BB6E3970B0.JPG",
+    "video": "",
+    "caption": "Three hydrogel batches compared: the left dish is too watery, failing to gel properly, while the right dish shows incomplete crosslinking — leaving the polymer chains unbonded and the material crumbly and fragmented rather than cohesive. The center dish shows the intended slurry-like consistency forming correctly, with visible bubbling as the network sets.",
+    "order": 6,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 7,
+  "fields": {
+    "project": 4,
+    "image": "",
+    "video": "project_gallery/videos/IMG_4912.mov",
+    "caption": "Freeze–thaw PAA–PVA hydrogel after being cut — visible seams show the material reattaching itself, demonstrating the self-healing behavior driven by hydrogen bonding within the polymer network.",
+    "order": 7,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 8,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4893.jpg",
+    "video": "",
+    "caption": "Inspiration for the extrusion method: DIY filament makers commonly feed cut plastic strips (e.g. from water bottles) through a modified hot glue gun to produce thin filament strands. This approach inspired testing whether a hydrogel could be extruded the same way.",
+    "order": 8,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 9,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_DB703622-1D27-4A46-BC5F-9F2B84BF7350.JPG",
+    "video": "",
+    "caption": "Measuring a strand of the self-healing freeze–thaw hydrogel with a ruler for scale, demonstrating its ability to stretch and hold together without tearing.",
+    "order": 9,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 10,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4809.jpg",
+    "video": "",
+    "caption": "The self-healing freeze–thaw hydrogel stretched into a long, continuous strand — showing the material's elasticity and cohesion without tearing.",
+    "order": 10,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 11,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4905_xsmRWgz.jpg",
+    "video": "",
+    "caption": "Measuring pH of a diluted PAA solution using the LabQuest 2 and pH sensor — part of characterizing how solution acidity affects hydrogel network formation.",
+    "order": 11,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 12,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_5006.jpg",
+    "video": "",
+    "caption": "Measuring tensile strength of a PAA–PAH polyelectrolyte film strand using a Vernier Force Sensor and LabQuest 2 — the same setup used to collect the force-at-tear data reported in the results.",
+    "order": 12,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 13,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4804.jpg",
+    "video": "",
+    "caption": "The freeze–thaw hydrogel stretched to several times its original length using tweezers — showcasing the self-healing network's elasticity and resistance to tearing.",
+    "order": 13,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 14,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_5008.jpg",
+    "video": "",
+    "caption": "After tensile testing showed acetone-treated PAA–PAH film had the best rigidity and the NaPAA-reinforced PAA–PVA hydrogel had the best mechanical strength, that hydrogel was poured into the mold to form cylindrical rods for extrusion testing.",
+    "order": 14,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 15,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_4806.jpg",
+    "video": "",
+    "caption": "The NaPAA-reinforced hydrogel rod, thawed slightly for handling, loaded into a modified hot glue gun for extrusion testing at approximately 110–120°C.",
+    "order": 15,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 16,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/IMG_5010.jpg",
+    "video": "",
+    "caption": "The NaPAA hydrogel initially extrudes smoothly, confirming it can flow under pressure — but it soon exits as thick, liquidy white chunks rather than holding a continuous strand shape, showing the material lacked the right viscosity and flow behavior for steady extrusion.",
+    "order": 16,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 22,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/IMG_1130.jpg",
+    "video": "",
+    "caption": "Prepared lithium carbonate solution adjusted to basic conditions (pH ~10) — one of the three basic treatment groups tested for lithium adsorption. The unlabeled flask beside it illustrates a difference in how fully the carbonate dissolved.",
+    "order": 1,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 23,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/IMG_1194.jpg",
+    "video": "",
+    "caption": "Filtrate from Group 1 (acidic condition) after filtration, with the collected aluminum hydroxide precipitate visible on the filter paper above — set aside for drying and mass analysis, while the filtrate itself was reserved for titration.",
+    "order": 2,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 24,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/IMG_1250.jpg",
+    "video": "",
+    "caption": "Monitoring solution pH with the LabQuest 2 and pH probe — this reading (6.77) corresponds to one of the acidic treatment groups tested for lithium adsorption efficiency.",
+    "order": 3,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 25,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/IMG_1206.jpg",
+    "video": "",
+    "caption": "Weighing a dried aluminum hydroxide precipitate (2.7426 g) on an analytical balance. Chemically, this solid forms as Al(OH)₃ adsorbs carbonate ions from the lithium carbonate solution, so its mass reflects how much carbonate — and indirectly lithium — was pulled out of solution at that pH.",
+    "order": 4,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 26,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/IMG_1254.jpg",
+    "video": "",
+    "caption": "Titration endpoint for an acidic treatment group filtrate — methyl orange shifts from red to a faint orange/yellow as sodium hydroxide neutralizes the remaining acid. Since acidic conditions reduce how well aluminum hydroxide adsorbs carbonate, more titrant needed here means more unreacted acid — and correspondingly more lithium-associated carbonate — was left behind in solution rather than captured by the adsorbent.",
+    "order": 5,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 27,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/Screenshot_2026-08-01_191528.jpg",
+    "video": "",
+    "caption": "A basic treatment group filtrate near its titration endpoint, shown alongside distilled water for color comparison — the faint pink from phenolphthalein shows how close the solution is to full neutralization. Since less titrant needed here reflects more successful adsorption, this endpoint helps quantify how much lithium-associated carbonate the aluminum hydroxide managed to remove from solution.",
+    "order": 6,
+    "category": "process"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 29,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/Solvent_0sFxWOj.jpg",
+    "video": "",
+    "caption": "Summary of tensile strength results across all five hydrogel formulations under different solvent treatments, alongside qualitative observations on texture and stability. The NaPAA-reinforced hydrogel maintained a consistent 0.24 N strength regardless of solvent — unlike the other formulations, which weakened, stiffened, or became tacky.",
+    "order": 17,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 30,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/Forece___Extension.jpg",
+    "video": "",
+    "caption": "Force at tear vs. extension at tear across all five formulations. NaPAA showed the best overall performance (0.24 N, 3.5 cm), while Borax and CaCl₂ matched in strength (0.21 N) but tore at much shorter extensions (1.1 cm and 2.0 cm). Freeze–Thaw and Glycerol extended further (2.8 cm and 4.0 cm) but at the cost of lower tensile strength (0.18 N each).",
+    "order": 18,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 31,
+  "fields": {
+    "project": 4,
+    "image": "project_gallery/Solvent___Force.jpg",
+    "video": "",
+    "caption": "Average force at tear vs. extension across three trials per solvent treatment for PAA–PAH films. Methanol produced the highest strength (0.52 N, 3.1 cm), followed by the untreated Control (0.49 N, 2.8 cm) and Isopropyl (0.47 N, 2.6 cm). Acetone showed the lowest strength and extension (0.43 N, 2.0 cm) but was still selected as the optimal shell material for its added rigidity and dimensional stability.",
+    "order": 19,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 32,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/pH_mass.jpg",
+    "video": "",
+    "caption": "Mass of aluminum hydroxide precipitate increased with pH, from 0.42 g at pH 4.65 to 0.82 g at pH 10.77 — showing that basic conditions led to greater adsorption than acidic ones. This reflects how H⁺ ions compete with lithium ions for adsorption sites: under acidic conditions, more H⁺ occupies the aluminum hydroxide's active sites, leaving less capacity to bind carbonate and reducing precipitate formation. Under basic conditions, fewer H⁺ ions compete for those sites, allowing more carbonate — and more lithium — to adsorb and precipitate out.",
+    "order": 7,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 33,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/Titrant.jpg",
+    "video": "",
+    "caption": "Titrant volumes across all acidic, basic, and control trials. Acidic groups consistently needed the least titrant (12.3–17.8 mL) — since less base was left in solution to neutralize, this indicates less lithium-associated carbonate escaped adsorption. Basic groups needed noticeably more (22.9–24.4 mL), closer to the control's ~24 mL, showing more carbonate remained unreacted in solution rather than binding to the aluminum hydroxide. Together with the precipitate mass data, this suggests basic conditions favor more overall adsorption.",
+    "order": 8,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 34,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/Data_Table.jpg",
+    "video": "",
+    "caption": "Raw titration volumes (initial, final, and net) for all three trials across each acidic and basic pH group — the underlying dataset used to calculate the average titrant volumes and run the statistical comparisons reported in the results.",
+    "order": 9,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 35,
+  "fields": {
+    "project": 3,
+    "image": "project_gallery/Data.jpg",
+    "video": "",
+    "caption": "Raw titration volumes for the control group (pH 9.60), with no aluminum hydroxide added — since nothing was removed from solution, this dataset served as the baseline for comparing how much titrant the acidic and basic treatment groups saved by adsorbing carbonate.",
+    "order": 10,
+    "category": "results"
+  }
+},
+{
+  "model": "projects.newsitem",
+  "pk": 1,
+  "fields": {
+    "title": "FSU Shadow: Process Engineer, Technical Engineer & Automation — Shaw Industries",
+    "slug": "shaw-industries-shadow-opportunity",
+    "image": "news/Shaw_Logo.jpg",
+    "date": "2026-08-04",
+    "description": "Shadowed process, technical engineering, automation, and chemistry teams at Shaw Industries Plant 70/86 in Bainbridge, GA. Observed large-scale synthetic turf fiber manufacturing from polymer extrusion through cooling, drawing, and winding, while exploring how processing conditions influence material properties and product consistency. Also gained exposure to tensile testing, dimensional measurements, spectrophotometry, and laboratory quality control. This experience strengthened my interest in process engineering, polymer manufacturing, and materials science.",
+    "tags": [
+      11,
+      12
+    ]
+  }
+}
+]
